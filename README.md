@@ -1,7 +1,7 @@
 # Bitcoin-Ticker-Flutter-
 Simple Mobile Application to tell the price of different crypto-currencies
 
-![alt text]("./Output/ticker.mp4")
+![alt text](".\Output\ticker.mp4")
 
 # How to Run the APP
 1. Install flutter from here
