@@ -14,7 +14,7 @@ class _PriceScreenState extends State<PriceScreen> {
 
   List<String> printedRates=['?','?','?'];
   Map<String,double> rates={};
-CoinData coinData=CoinData();
+ CoinData coinData=CoinData();
   List<Widget> list;
   String dropdownValue;
     List<Widget> getDropDownItems(){
@@ -35,9 +35,9 @@ CoinData coinData=CoinData();
 
         // printedRate=
 
-        rates['ETH']=await coinData.getETHData(value);
-        rates['LTC']=await coinData.getLTCData(value);
-        rates['BTC']=await coinData.getCoinData(value);
+        rates['BTC']=await coinData.getCoinData(selectedValue,'BTC');
+        rates['ETH']=await coinData.getCoinData(selectedValue,'ETH');
+        rates['LTC']=await coinData.getCoinData(selectedValue,'LTC');
         printedRates[0]=rates['BTC'].toStringAsFixed(3);
         printedRates[1]=rates['ETH'].toStringAsFixed(3);
         printedRates[2]=rates['LTC'].toStringAsFixed(3);
@@ -87,9 +87,9 @@ CoinData coinData=CoinData();
                 selectedValue=list.getRange(index, index+1) as String;
 
               });
-              rates['BTC']=await coinData.getCoinData(selectedValue);
-              rates['ETH']=await coinData.getETHData(selectedValue);
-              rates['LTC']=await coinData.getLTCData(selectedValue);
+              rates['BTC']=await coinData.getCoinData(selectedValue,'BTC');
+              rates['ETH']=await coinData.getCoinData(selectedValue,'ETH');
+              rates['LTC']=await coinData.getCoinData(selectedValue,'LTC');
 
               printedRates[0]=rates['BTH'].toString();
               printedRates[1]=rates['ETH'].toString();

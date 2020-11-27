@@ -45,8 +45,8 @@ const List<String> cryptoList = [
 
 class CoinData {
 
-  Future<double> getCoinData(String currency) async{
-    String url = kurl + 'BTC/' + currency + kApi_key;
+  Future<double> getCoinData(String currency,String cryptocurrency) async{
+    String url = kurl + '$cryptocurrency/' + currency + kApi_key;
     //Building the REST API String by adding the coin Detail and API key
     print(url);
     http.Response response = await http.get(url);
@@ -60,31 +60,31 @@ class CoinData {
     }
 
   }
-  Future<double> getLTCData(String currency) async {
-    String url = kurl + 'LTC/' + currency + kApi_key;
-    http.Response response = await http.get(url);
-    if (response.statusCode == 200) {
-      var exchangeData = jsonDecode(response.body);
-      print(exchangeData['rate']);
-      return exchangeData['rate'];
-    }
-    else {
-      print("Sorry!! Something went wrong");
-    }
-  }
-    Future<double> getETHData(String currency) async{
-      String url=kurl+'ETH/'+currency+kApi_key;
-      http.Response response=await http.get(url) ;
-      if(response.statusCode==200){
-        var exchangeData=jsonDecode(response.body);
-        print(exchangeData['rate']);
-        return exchangeData['rate'];
-      }
-      else{
-        print("Sorry!! Something went wrong");
-
-      }
-
-  }
+  // Future<double> getLTCData(String currency) async {
+  //   String url = kurl + 'LTC/' + currency + kApi_key;
+  //   http.Response response = await http.get(url);
+  //   if (response.statusCode == 200) {
+  //     var exchangeData = jsonDecode(response.body);
+  //     print(exchangeData['rate']);
+  //     return exchangeData['rate'];
+  //   }
+  //   else {
+  //     print("Sorry!! Something went wrong");
+  //   }
+  // }
+  //   Future<double> getETHData(String currency) async{
+  //     String url=kurl+'ETH/'+currency+kApi_key;
+  //     http.Response response=await http.get(url) ;
+  //     if(response.statusCode==200){
+  //       var exchangeData=jsonDecode(response.body);
+  //       print(exchangeData['rate']);
+  //       return exchangeData['rate'];
+  //     }
+  //     else{
+  //       print("Sorry!! Something went wrong");
+  //
+  //     }
+  //
+  // }
 
 }
