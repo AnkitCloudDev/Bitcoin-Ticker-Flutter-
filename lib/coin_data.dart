@@ -1,7 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-const kApi_key="?apikey=99770410-5E5F-4643-8F7D-929DAF71CA5E";
+const kApi_key="?apikey=";
+//use your own API key
 // TODO: GOTO https://www.coinapi.io/Pricing, scroll down and click get a free API key. Create an account and you will get a free API key mailed to you,
 const kurl="https://rest.coinapi.io/v1/exchangerate/";
 
