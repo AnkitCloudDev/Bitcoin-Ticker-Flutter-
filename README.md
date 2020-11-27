@@ -1,6 +1,7 @@
 # Bitcoin-Ticker-Flutter-
 Simple Mobile Application to tell the price of different crypto-currencies
 
+![alt text]("./Output/ticker.mp4")
 
 # How to Run the APP
 1. Install flutter from here
@@ -27,4 +28,5 @@ From the command line:
 Connect your Android device to your computer with a USB cable.
 Enter cd <app dir> where <app dir> is your application directory.
 Run flutter install.
+
 
